@@ -1,0 +1,36 @@
+{
+  "name": "frontend-nanodegree-mobile-portfolio",
+  "version": "1.0.0",
+  "description": "project mobile portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LissaNgSang/frontend-nanodegree-mobile-portfolio.git"
+  },
+  "keywords": [
+    "grunt",
+    "mobile",
+    "portfolio"
+  ],
+  "author": "lissangsang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LissaNgSang/frontend-nanodegree-mobile-portfolio/issues"
+  },
+  "homepage": "https://github.com/LissaNgSang/frontend-nanodegree-mobile-portfolio#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-mkdir": "^1.0.0",
+    "grunt-pagespeed": "^2.0.1",
+    "grunt-responsive-images": "^1.10.1",
+    "grunt-version": "^1.2.1",
+    "load-grunt-tasks": "^3.5.2",
+    "ngrok": "^2.2.24"
+  }
+}
