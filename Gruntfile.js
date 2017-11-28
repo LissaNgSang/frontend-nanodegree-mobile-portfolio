@@ -1,4 +1,18 @@
-// module.exports = function(grunt) {
+module.exports = function(grunt) {
+  grunt.initConfig({
+    cssmin: {
+        options: {
+            keepSpecialComments: 0
+        },
+        my_target: {
+            options: {
+                keepSpecialComments: 1
+            },
+            src: 'css/style.css',
+            dest: 'css/style.min.css'
+        }
+    }
+});
 // const mozjpeg = require ('imagemin-mozjpeg');
 
 //   grunt.initConfig({
@@ -91,7 +105,11 @@
 //     'imagemin'
 //     ]);
 
-// };
+grunt.loadNpmTasks('grunt-css');
+grunt.registerTask('default',[
+  'cssmin']);
+
+};
 
 
 
@@ -145,52 +163,56 @@
 //   grunt.registerTask('default', ['psi-ngrok']);
 // };
 
-'use strict'
+// 'use strict'
 
-var ngrok = require('ngrok');
+// var ngrok = require('ngrok');
 
-module.exports = function(grunt) {
+// module.exports = function(grunt) {
 
-  // Load grunt tasks
-  require('load-grunt-tasks')(grunt);
+//   // Load grunt tasks
+//   require('load-grunt-tasks')(grunt);
 
-  // Grunt configuration
-  grunt.initConfig({
-    pagespeed: {
-      options: {
-        nokey: true,
-        locale: "en_US",
-        threshold: 40
-      },
-      local: {
-        options: {
-          strategy: "desktop"
-        }
-      },
-      mobile: {
-        options: {
-          strategy: "mobile"
-        }
-      }
-    }
-  });
+//   // Grunt configuration
+//   grunt.initConfig({
+//     pagespeed: {
+//       options: {
+//         nokey: true,
+//         locale: "en_US",
+//         threshold: 40
+//       },
+//       local: {
+//         options: {
+//           strategy: "desktop"
+//         }
+//       },
+//       mobile: {
+//         options: {
+//           strategy: "mobile"
+//         }
+//       }
+//     }
+//   });
 
-  // Register customer task for ngrok
-  grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
-    var done = this.async();
-    var port = 8000;
+//   // Register customer task for ngrok
+//   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
+//     var done = this.async();
+//     var port = 8000;
 
-    ngrok.connect(port, function(err, url) {
-      if (err !== null) {
-        grunt.fail.fatal(err);
-        return done();
-      }
-      grunt.config.set('pagespeed.options.url', url);
-      grunt.task.run('pagespeed');
-      done();
-    });
-  });
+//     ngrok.connect(port, function(err, url) {
+//       if (err !== null) {
+//         grunt.fail.fatal(err);
+//         return done();
+//       }
+//       grunt.config.set('pagespeed.options.url', url);
+//       grunt.task.run('pagespeed');
+//       done();
+//     });
+//   });
 
-  // Register default tasks
-  grunt.registerTask('default', ['psi-ngrok']);
-};
+//   // Register default tasks
+//   grunt.registerTask('default', ['psi-ngrok']);
+// };
+
+
+
+
