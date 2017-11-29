@@ -8,8 +8,8 @@ module.exports = function(grunt) {
             options: {
                 keepSpecialComments: 1
             },
-            src: 'css/style.css',
-            dest: 'css/style.min.css'
+            src: 'views/css/style.css',
+            dest: 'views/css/style.min.css'
         }
     }
 });
