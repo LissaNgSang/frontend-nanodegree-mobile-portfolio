@@ -528,8 +528,9 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  var firstRow = (Math.floor(i / cols) * s);
-  for (var i = 0; i < 100; i++) {
+  var firstRow = 0;
+  for (var i = 0; i < 200; i++) {
+    firstRow = (Math.floor(i / cols) * s);
     if (firstRow > window.innerHeight) {
       break;
 }
