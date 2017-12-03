@@ -30,6 +30,7 @@ frontend-nanodegree-mobile-portfolio
 
 ## Optimize main.js for pizza.html
     -removed unnecessary calculations from for loops
+    -changed querySelector to getElementId
     -removed some variables that selected html classes from for loops
     -reduced pizza amounts from background based on the sizes of inner window
 
